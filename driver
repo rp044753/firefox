@@ -1,0 +1,11 @@
+case "FIREFOX":  
+            System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/driver/geckodriver.exe");        
+         /*   ProfilesIni allProfiles = new ProfilesIni();
+            FirefoxProfile myProfile = allProfiles.getProfile("default");
+            myProfile.setAcceptUntrustedCertificates(true);
+            myProfile.setAssumeUntrustedCertificateIssuer(true);
+            DRIVER = new FirefoxDriver(myProfile);*/
+            DRIVER.manage().deleteAllCookies();
+            System.out.println("FF verison="+((RemoteWebDriver)DRIVER).getCapabilities().getVersion());            
+            return DRIVER;
+            
